@@ -2,7 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const logger = require('morgan')
 const bodyParser = require('body-parser')
-const db = require('/db')
+const db = require('./db')
 
 //add controllers here later
 
