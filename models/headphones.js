@@ -3,6 +3,7 @@ const { Schema } = require('mongoose')
 
 const headphoneSchema = new Schema (
     {
+        model_name: {type: String, required: true},
         Brand: {type: String, required: true},
         Price: {type: Number, required: true},
         Mic: {type: Boolean, required: true},
