@@ -8,7 +8,7 @@ const db = require('/db')
 
 const PORT = process.env.PORT || 3001
 
-//middleware goes in this section
+//middleware goes in this section woooo
 const app = express()
 
 app.use(cors())
