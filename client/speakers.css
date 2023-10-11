@@ -5,7 +5,7 @@ body {
     background-color: black;
     margin: 0rem;
     overflow: hidden;
-    background-image: url("https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGVhZHBob25lc3xlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80");
+    background-image: url("https://bbf.digital/wp-content/uploads/2019/04/smart-speaker_feature.jpg ");
     background-repeat: no-repeat;
     background-size: cover
 }
@@ -49,3 +49,9 @@ head{
     background-color: #111112;
   
   }
+  li{ 
+    list-style-type: none;
+    color: aliceblue;
+    font: optional;
+  }
+  
