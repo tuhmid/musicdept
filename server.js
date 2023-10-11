@@ -27,5 +27,8 @@ app.put('/headphones/:id', headphoneController.updateHeadphone)
 app.delete('/headphones/:id', headphoneController.deleteHeadphone)
 app.get('/speakers', speakerController.getAllSpeakers)
 app.get('/speakers/:brand', speakerController.getSpeakersByBrand);
+app.post('/speakers', speakerController.createSpeaker); 
+app.put('/speakers/:id', speakerController.updateSpeaker);
+app.delete('/speakers/:id', speakerController.deleteSpeaker);
 
 app.listen(PORT, () => console.log(`Listening on port: ${PORT}`))
