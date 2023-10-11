@@ -48,4 +48,4 @@ async function run(){
     db.close()
 }
 
-//note: has not been run yet!
+run()

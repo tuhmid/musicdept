@@ -4,7 +4,7 @@ const { Speaker } = require('../models')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
-const seedSpeaker  = async () => {
+const seedSpeakers  = async () => {
     const Speakers = [
         {
             brand:"apple",
@@ -34,7 +34,7 @@ const seedSpeaker  = async () => {
             price: 200,
             bluetooth: true,
             yearModel: 2019,
-            surroundSound: flase,    
+            surroundSound: false,    
             quantity: 300,
             inStock: true,
             auxPort: false,
@@ -69,7 +69,7 @@ const seedSpeaker  = async () => {
 
 async function run() {
     await seedSpeakers()
-    db.close()``
+    db.close()
 }
 
 run()

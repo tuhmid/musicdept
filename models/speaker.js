@@ -5,7 +5,7 @@ const Speakers = new Schema(
     {
         brand: { type: String, required: true },
         modelName:{type: String , required : true},
-        price: { type: Float, required: true },
+        price: { type: Number, required: true },
         bluetooth: { type: Boolean, required: true },
         yearModel: { type: Number, required: true },
         surroundSound: { type: Boolean, required: true },
