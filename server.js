@@ -5,6 +5,8 @@ const bodyParser = require('body-parser')
 const db = require('./db')
 
 const headphoneController = require('./controllers/headphonesController')
+const speakerController = require('./controllers/speakersController')
+
 
 const PORT = process.env.PORT || 3001
 
@@ -19,5 +21,7 @@ app.use(bodyParser.json())
 
 app.get('/', (req,res) => res.send('The root of the stereo department'))
 app.get('/headphones', headphoneController.getAllHeadphones)
+app.get('/speakers', speakerController.getAllSpeakers)
+
 
 app.listen(PORT, () => console.log(`Listening on port: ${PORT}`))
