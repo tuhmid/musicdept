@@ -1,50 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your HTML Page</title>
-    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script defer src='script.js'></script>
     <link rel="stylesheet" href="search.css" />
     <nav>
         <ul>
-           <H1>headphones</H1>
-           <a href="Home.html"><li>HOME</li></a>
-           <a href="search.html"><li>SEARCH</li></a>
-           <a href="headphones.html"><li>HEADPHONES</li></a>
-           <a href="speakers.html"><li>SPEAKERS</li></a>
-        
+            <H1>headphones</H1>
+            <a href="Home.html">
+                <li>HOME</li>
+            </a>
+            <a href="search.html">
+                <li>SEARCH</li>
+            </a>
+            <a href="headphones.html">
+                <li>HEADPHONES</li>
+            </a>
+            <a href="speakers.html">
+                <li>SPEAKERS</li>
+            </a>
+
 
         </ul>
     </nav>
 </head>
 
-                       
+
 <body>
 
     <div id="container">
         <div class="searchCard">
-            <label for="inputBar"><h1>Product Look Up:</h1></label>
-            <input type="text" id="inputBar" style="width: 400px;">
-            <button id="searchButton">Search</button>
+            <label for="inputBar">
+                <h1>Product Look Up:</h1>
+            </label>
+            <input type="text" id="headphoneInput" style="width: 400px;" placeholder="Search headphonones by brand">
+            <button id="searchHeadphones">Search</button>
+            <input type="text" id="speakerInput" style="width: 400px;" placeholder="Search speakers by brand">
+            <button id="searchSpeakers">Search</button>
             <div id="CI">
                 <div id="">
-                    <h2></h2>
-                    <p id=""></p>
-                    <h2></h2>
-                    <p id=""></p>
-                    <h2></h2>
-                    <p id=""></p>
-                    <h2></h2>
-                    <p id=""></p>
-                    <h2></h2>
-                    <p id=""></p>
+                    <h2>Model Name:</h2>
+                    <p id="modelName"></p>
+                    <h2>Brand:</h2>
+                    <p id="brand"></p>
+                    <h2>Price:</h2>
+                    <p id="price"></p>
+                    <h2>Mic:</h2>
+                    <p id="mic"></p>
+                    <h2>Noise Cancellation:</h2>
+                    <p id="noise"></p>
+                    <h2>Bluetooth:</h2>
+                    <p id="bluetooth"></p>
+                    <h2>Year Model:</h2>
+                    <p id="year"></p>
+                    <h2>Quantity:</h2>
+                    <p id="quantity"></p>
                 </div>
             </div>
         </div>
     </div>
-    
+
 </body>
 
 </html>
