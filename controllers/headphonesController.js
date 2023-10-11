@@ -3,6 +3,7 @@ const { Headphone } = require('../models')
 module.exports = {
     getAllHeadphones,
     getByBrand,
+    createHeadphone
 }
 
 async function getAllHeadphones(req,res) {
@@ -27,3 +28,14 @@ async function getByBrand (req,res){
     }
 }
 
+async function createHeadphone(req,res){
+    try{
+        const headphone = new Headphone(req.body)
+        await headphone.save()
+        return res.status(201).json({
+            headphone
+        })
+    } catch (e) {
+        return res.status(500).send(e.message)
+    }
+}

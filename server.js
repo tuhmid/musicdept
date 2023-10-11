@@ -22,6 +22,7 @@ app.use(bodyParser.json())
 app.get('/', (req,res) => res.send('The root of the stereo department'))
 app.get('/headphones', headphoneController.getAllHeadphones)
 app.get('/headphones/:brand', headphoneController.getByBrand)
+app.post('/headphones', headphoneController.createHeadphone)
 app.get('/speakers', speakerController.getAllSpeakers)
 app.get('/speakers/:brand', speakerController.getSpeakersByBrand);
 
