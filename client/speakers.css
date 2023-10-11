@@ -54,4 +54,25 @@ head{
     color: aliceblue;
     font: optional;
   }
-  
+ 
+  #container {
+    width: 60% ;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+   margin:auto ;
+}
+ 
+ 
+  #CI {
+    background-image: url("https://i.pinimg.com/originals/4a/96/e6/4a96e602750b8ef669a77565becf3939.gif");
+  display: flex;
+    color: aliceblue;
+    font-weight: bold;
+    font-size: medium;
+    overflow: hidden;
+    flex-direction: row;
+     font: 1em sans-serif;
+    }
+ 
