@@ -16,4 +16,4 @@ const headphoneSchema = new Schema (
     {timestamps: true}
 )
 
-module.exports = headphoneSchema
+module.exports = headphoneSchema    
