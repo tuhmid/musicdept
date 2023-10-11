@@ -1,0 +1,51 @@
+body {
+
+    height: 100vh;
+    width: 100vw, cover;
+    background-color: black;
+    margin: 0rem;
+    overflow: hidden;
+    background-image: url("https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGVhZHBob25lc3xlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80");
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+
+h2 {
+    color: aliceblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+H1 {
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    /* Center the title horizontally */
+    font-style: italic;
+    font-size: 200%;
+}
+
+button {
+    background-color: black;
+    color: white;
+
+}
+
+ul {
+    display: flex;
+    justify-content: space-evenly;
+
+    padding: 1rem 2rem;
+    display: flex;
+    gap: 12rem;
+    border-left: 3px solid var(--border-color);
+    align-items: center;
+    justify-content: center;
+
+
+}
+head{
+    background-color: #111112;
+  
+  }
