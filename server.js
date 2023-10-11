@@ -23,6 +23,8 @@ app.get('/', (req,res) => res.send('The root of the stereo department'))
 app.get('/headphones', headphoneController.getAllHeadphones)
 app.get('/headphones/:brand', headphoneController.getByBrand)
 app.post('/headphones', headphoneController.createHeadphone)
+app.put('/headphones/:id', headphoneController.updateHeadphone)
+app.delete('/headphones/:id', headphoneController.deleteHeadphone)
 app.get('/speakers', speakerController.getAllSpeakers)
 app.get('/speakers/:brand', speakerController.getSpeakersByBrand);
 
