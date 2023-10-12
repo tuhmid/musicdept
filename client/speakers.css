@@ -7,8 +7,13 @@ body {
     overflow: hidden;
     background-image: url("https://img.freepik.com/free-photo/glowing-spotlight-illuminating-modern-nightclub-performance-space-generated-by-ai_188544-29706.jpg?t=st=1697120385~exp=1697123985~hmac=7fb4b281e88ae96826c3e9970533da3fd4fb4fb89d6e33271bc6c0e40543224e&w=1380");
     background-repeat: no-repeat;
-    background-size: cover
-}
+  
+    background-size: cover;
+    color:white;
+    overflow:auto;
+    padding-left: 30px;
+  }
+
 
 
 h2 {
@@ -21,7 +26,7 @@ H1 {
     color: aliceblue;
     display: flex;
     justify-content: center;
-    /* Center the title horizontally */
+  
     font-style: italic;
     font-size: 200%;
 }
@@ -75,4 +80,24 @@ head{
     flex-direction: row;
      font: 1em sans-serif;
     }
- 
+  
+  
+  #container {
+    width: 60% ;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+   margin:auto ;
+   
+   }
+   
+   #CI {
+  
+     color: aliceblue;
+     font-weight: bold;
+     font-size: medium;
+     overflow: hidden;
+     flex-direction: row;
+      font: 1em sans-serif;
+     }
