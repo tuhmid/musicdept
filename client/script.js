@@ -48,50 +48,50 @@ searchBtn.onclick = async () => {
 //I think ideally we would be creating HTML elements so we can accomodate as many items of a certain brand as we have in the database (e.g. if we have three different apple products, we only have pre-made space in the HTML for one)
 
 
-//speakers >>>
-const searchBtn2 = document.querySelector('#searchHeadphones')
-const surrSound = link('#surroundSound')
-const aux = link('#auxPort')
+// //speakers >>>
+// const searchBtn2 = document.querySelector('#searchHeadphones')
+// const surrSound = link('#surroundSound')
+// const aux = link('#auxPort')
 
-const speakerObj = {}
+// const speakerObj = {}
 
-function addDataSpeakers(speakerObj) {
-    model.innerHTML = speakerObj.modelName;
-    brand.innerHTML = speakerObj.brand;
-    price.innerHTML = speakerObj.price;
-    bluetooth.innerHTML = speakerObj.bluetooth;
-    year.innerHTML = speakerObj.yearModel;
-    quantity.innerHTML = speakerObj.quantity;
-     }
+// function addDataSpeakers(speakerObj) {
+//     model.innerHTML = speakerObj.modelName;
+//     brand.innerHTML = speakerObj.brand;
+//     price.innerHTML = speakerObj.price;
+//     bluetooth.innerHTML = speakerObj.bluetooth;
+//     year.innerHTML = speakerObj.yearModel;
+//     quantity.innerHTML = speakerObj.quantity;
+//      }
   
-searchBtn2.onclick = async () => {
-    // Getting the brand input from the search bar
-    const brandInput = document.querySelector('#speakerInput').value;
+// searchBtn2.onclick = async () => {
+//     // Getting the brand input from the search bar
+//     const brandInput = document.querySelector('#speakerInput').value;
   
-    try {
-      // Send a GET request to the server to search for speakers with the specified brand
-      const response = await axios.get(`http://localhost:3001/speakers/${brandInput}`);
+//     try {
+//       // Send a GET request to the server to search for speakers with the specified brand
+//       const response = await axios.get(`http://localhost:3001/speakers/${brandInput}`);
 
-      //NOT WORKING WHY
+//       //NOT WORKING WHY
       
-      const speakers = response.data;
+//       const speakers = response.data;
   
-      // Check if any speakers were found
-      if (speakers.length > 0) {
-        // Display the data for the first speaker found
-        const firstSpeaker = speakers[0];
-        addData(firstSpeaker);
-      } else {
-        // No speakers found for the specified brand
-        model.innerHTML = 'Not Found';
-        brand.innerHTML = '';
-        price.innerHTML = '';
-        bluetooth.innerHTML = '';
-        year.innerHTML = '';
-        quantity.innerHTML = '';
-      }
-    } catch (error) {
-      // Handle errors
-      console.error(error);
-    }
-};
+//       // Check if any speakers were found
+//       if (speakers.length > 0) {
+//         // Display the data for the first speaker found
+//         const firstSpeaker = speakers[0];
+//         addData(firstSpeaker);
+//       } else {
+//         // No speakers found for the specified brand
+//         model.innerHTML = 'Not Found';
+//         brand.innerHTML = '';
+//         price.innerHTML = '';
+//         bluetooth.innerHTML = '';
+//         year.innerHTML = '';
+//         quantity.innerHTML = '';
+//       }
+//     } catch (error) {
+//       // Handle errors
+//       console.error(error);
+//     }
+// };
