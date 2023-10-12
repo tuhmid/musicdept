@@ -47,6 +47,7 @@ function addSpeaker(speakerObj) {
   //making the html elements and passing in the data
   const resultDiv = document.createElement('div')
   document.body.appendChild(resultDiv)
+  resultDiv.setAttribute('id', 'speakerDiv')
 
   const modelHeader = document.createElement('h2')
   modelHeader.innerHTML = 'Model Name:'
