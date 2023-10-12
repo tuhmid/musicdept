@@ -79,7 +79,6 @@ searchBtn2.onclick = async () => {
     if (speakers.length > 0) {
         // Display the data for the first speaker found
         const firstSpeaker = speakers[0];
-        console.log(firstSpeaker)
         addDataSpeakers(firstSpeaker);
     } else {
         // No speakers found for the specified brand
