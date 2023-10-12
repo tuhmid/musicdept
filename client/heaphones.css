@@ -7,7 +7,10 @@ body {
     overflow: hidden;
     background-image: url("https://img.freepik.com/free-photo/inspiration-asian-young-woman-s-portrait-dark-wall-neon-light-beautiful-female-model-with-headphones-concept-human-emotions-facial-expression-youth-sales-ad_155003-39803.jpg?w=1380&t=st=1697119823~exp=1697120423~hmac=8f946c79026560426d53b9068f1643dcc079b094d5dc10f9252c32168eac3927");
     background-repeat: no-repeat;
-    background-size: cover
+    background-size: cover;
+    color:white;
+    overflow:auto;
+    padding-left: 30px;
 }
 
 
