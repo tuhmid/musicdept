@@ -13,14 +13,14 @@ const qnty = link('#quantity')
 const headphoneObj = {}
 
 //helper function so I can stop typing query selector repeatedly
-function link(id){
+function link(id) {
     return document.querySelector(id)
 }
 
 //function to take the values from the headphone object in the database and pass them through to their respective sections in the DOM
-function addData(headphoneObj){
+function addData(headphoneObj) {
 
-    let { model_name, Brand, Price, Mic, Noise_cancelling, Bluetooth, year_model, quantity} = headphoneObj
+    let { model_name, Brand, Price, Mic, Noise_cancelling, Bluetooth, year_model, quantity } = headphoneObj
 
     model.innerHTML = model_name
     brand.innerHTML = Brand
@@ -40,7 +40,7 @@ searchBtn.onclick = async () => {
 
     let headphones = result.data //this is an array of all headphone objects
 
-    for (let i=0; i < headphones.length ; i++){
+    for (let i = 0; i < headphones.length; i++) {
         let headphoneObj = headphones[i]
         addData(headphoneObj)
     }
@@ -49,49 +49,49 @@ searchBtn.onclick = async () => {
 
 
 // //speakers >>>
-// const searchBtn2 = document.querySelector('#searchHeadphones')
-// const surrSound = link('#surroundSound')
-// const aux = link('#auxPort')
+const searchBtn2 = document.querySelector('#searchSpeakers')
+const surrSound = link('#surroundSound')
+const aux = link('#auxPort')
 
-// const speakerObj = {}
+const speakerObj = {}
 
-// function addDataSpeakers(speakerObj) {
-//     model.innerHTML = speakerObj.modelName;
-//     brand.innerHTML = speakerObj.brand;
-//     price.innerHTML = speakerObj.price;
-//     bluetooth.innerHTML = speakerObj.bluetooth;
-//     year.innerHTML = speakerObj.yearModel;
-//     quantity.innerHTML = speakerObj.quantity;
-//      }
-  
-// searchBtn2.onclick = async () => {
-//     // Getting the brand input from the search bar
-//     const brandInput = document.querySelector('#speakerInput').value;
-  
-//     try {
-//       // Send a GET request to the server to search for speakers with the specified brand
-//       const response = await axios.get(`http://localhost:3001/speakers/${brandInput}`);
+function addDataSpeakers(speakerObj) {
+    model.innerHTML = speakerObj.modelName;
+    brand.innerHTML = speakerObj.brand;
+    price.innerHTML = speakerObj.price;
+    bluetooth.innerHTML = speakerObj.bluetooth;
+    year.innerHTML = speakerObj.yearModel;
+    quantity.innerHTML = speakerObj.quantity;
+}
 
-//       //NOT WORKING WHY
-      
-//       const speakers = response.data;
-  
-//       // Check if any speakers were found
-//       if (speakers.length > 0) {
-//         // Display the data for the first speaker found
-//         const firstSpeaker = speakers[0];
-//         addData(firstSpeaker);
-//       } else {
-//         // No speakers found for the specified brand
-//         model.innerHTML = 'Not Found';
-//         brand.innerHTML = '';
-//         price.innerHTML = '';
-//         bluetooth.innerHTML = '';
-//         year.innerHTML = '';
-//         quantity.innerHTML = '';
-//       }
-//     } catch (error) {
-//       // Handle errors
-//       console.error(error);
-//     }
-// };
+searchBtn2.onclick = async () => {
+    // Getting the brand input from the search bar
+    const brandInput = document.querySelector('#speakerInput').value;
+    // try {
+    // Send a GET request to the server to search for speakers with the specified brand
+    const response = await axios.get(`http://localhost:3001/speakers/${brandInput}`);
+
+    //NOT WORKING WHY
+
+    const speakers = response.data; //an array of 2 obj
+
+    // Check if any speakers were found
+    if (speakers.length > 0) {
+        // Display the data for the first speaker found
+        const firstSpeaker = speakers[0];
+        console.log(firstSpeaker)
+        addDataSpeakers(firstSpeaker);
+    } else {
+        // No speakers found for the specified brand
+        model.innerHTML = 'Not Found';
+        brand.innerHTML = '';
+        price.innerHTML = '';
+        bluetooth.innerHTML = '';
+        year.innerHTML = '';
+        quantity.innerHTML = '';
+    }
+    // } catch (error) {
+    //   // Handle errors
+    //   console.error(error);
+    // }
+};
